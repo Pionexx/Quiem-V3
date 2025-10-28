@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>DDOS Queim V3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>DDOS Queim V3</h1>
+
+  <label>Target URL</label>
+  <input id="url" type="text" placeholder="https://example.com" />
+
+  <label>RPS per tab</label>
+  <input id="rps" type="number" min="10" max="10000" value="500" />
+
+  <button id="startBtn" onclick="toggleFlood()">START</button>
+
+  <div class="stats">
+    <div>Status: <span id="status">Idle</span></div>
+    <div>Request: <span id="req">0</span></div>
+    <div>Success: <span id="ok">0</span></div>
+    <div>Fail: <span id="fail">0</span></div>
+    <div>Real RPS: <span id="realRPS">0</span></div>
+  </div>
+
+  <script src="worker.js"></script>
+</body>
+</html>
